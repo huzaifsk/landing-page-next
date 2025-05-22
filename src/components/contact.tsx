@@ -2,10 +2,6 @@
 import React from "react";
 import { motion } from "motion/react";
 import dynamic from "next/dynamic";
-import { Label } from "./ui/label";
-import { Input } from "./ui/input";
-import { cn } from '../lib/utils';
-import { Textarea } from "./ui/textarea";
 import { Cover } from "./ui/cover";
 
 const World = dynamic(() => import("./ui/globe").then((m) => m.World), {
@@ -14,20 +10,6 @@ const World = dynamic(() => import("./ui/globe").then((m) => m.World), {
 });
 
 export function ContactUs() {
-
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const form = event.target;
-    const firstname = form.firstname.value;
-    const lastname = form.lastname.value;
-    const email = form.email.value;
-    const message = form.message.value;
-
-    const mailto = `mailto:huzaifsk12@gmail.com?subject=Contact%20Form%20Submission&body=First Name: ${encodeURIComponent(firstname)}%0ALast Name: ${encodeURIComponent(lastname)}%0AEmail: ${encodeURIComponent(email)}%0AMessage: ${encodeURIComponent(message)}`;
-
-    window.location.href = mailto;
-    console.log("Form submitted");
-  };
 
   const globeConfig = {
     pointSize: 4,
