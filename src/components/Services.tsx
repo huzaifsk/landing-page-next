@@ -30,7 +30,7 @@ const content = [
     content: (
       <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-blue-600 to-indigo-600 text-white rounded-xl shadow-md">
         <Image
-          src="/web-dev.jpg"
+          src="/web.jpg"
           width={300}
           height={300}
           className="h-full w-full object-cover rounded-xl"
