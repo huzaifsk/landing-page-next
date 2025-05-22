@@ -41,6 +41,9 @@ export default function HomePage() {
     setIsOpen(true)
   }
 
+  const rootElement = typeof document !== "undefined" ? document.getElementById("root") : null;
+
+
   return (
     <main className="flex flex-col min-h-screen  text-white">
       {/* --- Navbar --- */}
@@ -123,7 +126,7 @@ export default function HomePage() {
                 }}
                 onModalClose={() => setIsOpen(false)}
                 open={isOpen}
-                rootElement={document.getElementById("root")}
+                rootElement={rootElement}
               />
     </main>
   );
