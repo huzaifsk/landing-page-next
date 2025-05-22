@@ -28,6 +28,13 @@ export default function HomePage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
 
+    const [rootElement, setRootElement] = useState<HTMLElement | null>(null);
+
+  useEffect(() => {
+    const el = document.getElementById("root");
+    setRootElement(el);
+  }, []);
+
 
   const navItems = [
     { name: "Home", link: "#hero" },
@@ -41,7 +48,6 @@ export default function HomePage() {
     setIsOpen(true)
   }
 
-  const rootElement = typeof document !== "undefined" ? document.getElementById("root") : null;
 
 
   return (
@@ -115,19 +121,21 @@ export default function HomePage() {
 
       <Footer />
 
-      <PopupModal
-                url="https://calendly.com/huzaifsk12"
-                pageSettings={{
-                  backgroundColor: "ffffff",
-                  hideEventTypeDetails: false,
-                  hideLandingPageDetails: false,
-                  primaryColor: "00a2ff",
-                  textColor: "4d5055",
-                }}
-                onModalClose={() => setIsOpen(false)}
-                open={isOpen}
-                rootElement={rootElement}
-              />
+      {rootElement && (
+        <PopupModal
+          url="https://calendly.com/huzaifsk12"
+          pageSettings={{
+            backgroundColor: "ffffff",
+            hideEventTypeDetails: false,
+            hideLandingPageDetails: false,
+            primaryColor: "00a2ff",
+            textColor: "4d5055",
+          }}
+          onModalClose={() => setIsOpen(false)}
+          open={isOpen}
+          rootElement={rootElement}
+        />
+      )}
     </main>
   );
 }
