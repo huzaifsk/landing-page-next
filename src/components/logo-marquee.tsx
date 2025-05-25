@@ -22,7 +22,7 @@ export default function LogoMarquee() {
               height={logo.height}
               width={logo.height * 2}
               loading="lazy"
-              className="grayscale hover:grayscale-0 transition duration-300 ease-in-out"
+              className=""
             />
           </div>
         ))}

@@ -1,15 +1,58 @@
 "use client";
-import React from "react";
+import React, { useRef, useState, ChangeEvent, FormEvent } from "react";
 import { motion } from "motion/react";
 import dynamic from "next/dynamic";
 import { Cover } from "./ui/cover";
+import { Label } from "./ui/label";
+import { Input } from "./ui/input";
+import { cn } from '../lib/utils';
+import { Textarea } from "./ui/textarea";
+import { toast } from 'sonner';
+import emailjs from "@emailjs/browser";
 
 const World = dynamic(() => import("./ui/globe").then((m) => m.World), {
   ssr: false,
-
 });
 
 export function ContactUs() {
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const [form, setForm] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
+        formRef.current!,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string
+      )
+      .then(
+        () => {
+          setLoading(false);
+          toast.success('Message sent successfully!');
+        },
+        (error) => {
+          setLoading(false);
+          toast.error('Failed to send message. Please try again.');
+          console.error(error);
+        }
+      );
+  };
 
   const globeConfig = {
     pointSize: 4,
@@ -398,39 +441,93 @@ export function ContactUs() {
   ];
 
   return (
-  <div className="flex items-center justify-center md:py-56 py-20 min-h-screen bg-gray-50 dark:bg-black w-full">
+  <div className="flex items-center justify-center py-20 md:py-40 min-h-screen bg-gray-50 dark:bg-black w-full">
   <div className="w-full max-w-7xl px-4 mx-auto">
     {/* Title & Subtitle */}
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
-      className="mb-10 text-center"
+      className="mb-12 text-center"
     >
       <h2 className="text-xl md:text-4xl font-bold text-black dark:text-white">
-        We Build Globally. Let's <Cover className="cursor-pointer"> Scale </Cover> Together.
+        We Build Globally. Let's <Cover className="cursor-pointer">Scale</Cover> Together.
       </h2>
-      <p className="text-base md:text-lg text-neutral-700 dark:text-neutral-200 max-w-xl mx-auto mt-2">
+      <p className="text-base md:text-lg text-neutral-700 dark:text-neutral-200 max-w-2xl mx-auto mt-3">
         Whether you're looking to expand your reach, accelerate your growth, or collaborate with a global-first team — we're here to make it happen. Our impact spans continents, and so can yours.
       </p>
     </motion.div>
 
-    {/* Responsive Grid */}
-    <div className="flex flex-col-reverse md:flex-row gap-12 md:gap-20">
+    {/* Content Row */}
+    <div className="flex flex-col-reverse md:flex-row items-center md:items-start gap-12 md:gap-20">
+      
+      {/* Form Section */}
+      <div className="w-full md:w-1/2">
+        <form ref={formRef} onSubmit={handleSubmit} className="w-full">
+          <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-4">
+            <LabelInputContainer>
+              <Label htmlFor="firstname">First name</Label>
+              <Input id="firstname" placeholder="Tyler" name="firstName" 
+    value={form.firstName} type="text"  onChange={handleChange}/>
+            </LabelInputContainer>
+            <LabelInputContainer>
+              <Label htmlFor="lastname">Last name</Label>
+              <Input id="lastname" placeholder="Durden" name="lastName" 
+    value={form.lastName} type="text" onChange={handleChange}/>
+            </LabelInputContainer>
+          </div>
 
-      {/* Globe */}
-     <div className="flex-1 relative w-full min-h-[300px] md:h-[500px]">
-  <div className="absolute inset-0 z-10">
-    <World data={sampleArcs} globeConfig={globeConfig} />
-  </div>
-  <div className="absolute w-full bottom-0 h-40 bg-gradient-to-b pointer-events-none ... z-20" />
-</div>
+          <LabelInputContainer className="mb-4">
+            <Label htmlFor="email">Email Address</Label>
+            <Input id="email" placeholder="projectmayhem@fc.com"
+            name="email" 
+    value={form.email}
+            type="email" onChange={handleChange}/>
+          </LabelInputContainer>
 
+          <LabelInputContainer className="mb-4">
+            <Label htmlFor="message">Message</Label>
+            <Textarea id="message" placeholder="Send us your query.."
+            name="message" 
+    value={form.message}
+            rows={6} onChange={handleChange} />
+          </LabelInputContainer>
+
+
+          <button
+            type="submit"
+            className="group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]"
+          >
+             {loading ? "Sending..." : "Send"}
+          </button>
+        </form>
+      </div>
+
+      {/* Globe Section */}
+      <div className="w-full md:w-1/2 relative min-h-[300px] md:min-h-[500px]">
+        <div className="absolute inset-0 z-10">
+          <World data={sampleArcs} globeConfig={globeConfig} />
+        </div>
+        <div className="absolute w-full bottom-0 h-40 bg-gradient-to-b from-transparent to-white dark:to-black pointer-events-none z-20" />
+      </div>
     </div>
   </div>
 </div>
 
 
-
   );
 }
+
+const LabelInputContainer = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => {
+  return (
+    <div className={cn("flex w-full flex-col space-y-2", className)}>
+      {children}
+    </div>
+  );
+};
