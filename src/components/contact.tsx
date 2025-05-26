@@ -15,9 +15,9 @@ export function ContactUs() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
-      className="mb-12 text-center"
+      className="mb-36 text-center"
     >
-      <h2 className="text-xl md:text-4xl font-bold text-black dark:text-white">
+      <h2 className="text-xl md:text-5xl font-bold text-black dark:text-white">
         We Build Globally. Let's <Cover className="cursor-pointer">Scale</Cover> Together.
       </h2>
       <p className="text-base md:text-lg text-neutral-700 dark:text-neutral-200 max-w-2xl mx-auto mt-3">

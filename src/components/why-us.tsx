@@ -110,7 +110,7 @@ export default function WhyUs() {
     <section id="why-us" className="w-full py-24 md:py-40 bg-white text-black">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Why Choose Us</h2>
+          <h2 className="text-5xl font-bold mb-4">Why Choose Us</h2>
           <p className="text-neutral-600 md:text-lg  mx-auto">
             We blend creativity, strategy, and technology to build outstanding digital experiences tailored to your goals.
           </p>

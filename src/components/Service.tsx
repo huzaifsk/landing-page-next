@@ -9,7 +9,7 @@ export default function Service() {
       <div className="flex flex-col items-center justify-center w-full max-w-7xl px-4 space-y-8">
         {/* Section Title */}
         <div className="text-center py-10">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black">
+          <h1 className="text-3xl md:text-5xl lg:text-5xl font-bold text-black">
             Our Services
           </h1>
           <p className="mt-2 text-neutral-600 text-base md:text-lg">
