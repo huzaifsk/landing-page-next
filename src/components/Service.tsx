@@ -1,18 +1,18 @@
 import { WobbleCard } from "./ui/wobble-card";
 
-export default function Statistics() {
+export default function Service() {
   return (
     <section
       id="service"
-      className="w-full h-full flex items-center justify-center bg-black py-36"
+      className="w-full h-full flex items-center justify-center bg-white py-36"
     >
       <div className="flex flex-col items-center justify-center w-full max-w-7xl px-4 space-y-8">
         {/* Section Title */}
         <div className="text-center py-10">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black">
             Our Services
           </h1>
-          <p className="mt-2 text-neutral-400 text-base md:text-lg">
+          <p className="mt-2 text-neutral-600 text-base md:text-lg">
             We offer full-stack digital solutions designed to elevate your
             business and empower your product.
           </p>

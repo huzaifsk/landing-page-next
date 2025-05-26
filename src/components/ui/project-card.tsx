@@ -34,7 +34,7 @@ export function ProjectCard({ title, description, image, link }: {
             alt={title}
           />
         </CardItem>
-        <div className="flex justify-between items-center mt-6">
+        {/* <div className="flex justify-between items-center mt-6">
           {link && (
             <CardItem
               translateZ={20}
@@ -53,7 +53,7 @@ export function ProjectCard({ title, description, image, link }: {
           >
             Details
           </CardItem>
-        </div>
+        </div> */}
       </CardBody>
     </CardContainer>
   );

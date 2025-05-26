@@ -10,9 +10,9 @@ export function Industries() {
   ));
 
   return (
-   <div id="industries" className="w-full h-full md:py-56 py-24 text-center flex flex-col items-center justify-center">
+   <div id="industries" className="bg-teal-200 w-full h-full md:py-56 py-24 text-center flex flex-col items-center justify-center">
   <div className="max-w-7xl px-4 mx-auto">
-    <h2 className="text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans text-center">
+    <h2 className="text-xl md:text-5xl font-bold text-neutral-800 dark:text-teal-900 font-sans text-center">
       Driving Innovation Across Industries
     </h2>
     <p className="mt-4 text-base md:text-lg text-neutral-600 dark:text-neutral-400 text-center max-w-3xl mx-auto">

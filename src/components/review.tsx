@@ -41,11 +41,11 @@ export default function Review() {
   return (
     <section
       id="testimonials"
-      className="w-full py-20 md:py-56 bg-white dark:bg-black text-center"
+      className="w-full py-20 md:py-56 bg-teal-200 dark:bg-black text-center"
     >
       <div className="max-w-6xl mx-auto px-4">
         {/* Title */}
-        <h2 className="text-xl md:text-5xl font-bold text-neutral-900 dark:text-white">
+        <h2 className="text-xl md:text-5xl font-bold text-teal-900 dark:text-white">
           What Our Clients Say
         </h2>
 

@@ -2,15 +2,12 @@
 
 import {  useEffect, useState } from "react";
 import { Hero } from "../components/hero";
-import Statistics from "../components/Statistics";
-import { Services } from '../components/Services';
 import {
   Navbar,
   NavBody,
   NavItems,
   MobileNav,
   NavbarLogo,
-  NavbarButton,
   MobileNavHeader,
   MobileNavToggle,
   MobileNavMenu,
@@ -22,7 +19,7 @@ import { ContactUs } from '../components/contact';
 import { Industries } from "@/components/industries";
 import Review from '../components/review';
 import { Footer } from '../components/Footer';
-import { Button } from "@/components/ui/moving-border";
+import Service from "../components/Service";
 
 
 export default function HomePage() {
@@ -60,13 +57,9 @@ export default function HomePage() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-           <Button
-           onClick={()=> setIsOpen(true)}
-        borderRadius="1.75rem"
-        className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 cursor-pointer"
-      >
-        Book a call
-      </Button>
+           <button onClick={()=> setIsOpen(true)} className="px-8 py-2 rounded-full bg-teal-500 text-white font-bold transition duration-200 hover:bg-white hover:text-teal-700 border-2 border-transparent hover:border-teal-500 z-10">
+              Book a call
+            </button>
           </div>
         </NavBody>
 
@@ -95,28 +88,20 @@ export default function HomePage() {
               </a>
             ))}
             <div className="flex flex-col gap-4 pt-4">
-              <NavbarButton
-                onClick={handleMobileClick}
-                variant="primary"
-                className="w-full"
-              >
-                Book a call
-              </NavbarButton>
+              <button onClick={handleMobileClick} className="px-8 py-2 rounded-full bg-teal-500 text-white font-bold transition duration-200 hover:bg-white hover:text-teal-700 border-2 border-transparent hover:border-teal-500 z-10">
+              Book a call
+            </button>
             </div>
           </MobileNavMenu>
         </MobileNav>
       </Navbar>
 
-      {/* --- Hero Section --- */}
+
       <Hero />
 
       <LogoMarquee />
 
-      {/* --- Statistics Section --- */}
-      <Statistics />
-
-      {/* --- Service Section --- */}
-      {/* <Services /> */}
+      <Service />
 
       <Industries />
 

@@ -75,7 +75,7 @@ export default function CaseStudy() {
     <>
     <div className="relative  flex h-screen w-full flex-col items-center justify-center overflow-hidden">
      <h2 className="relative z-20 text-center text-4xl font-bold text-white md:text-5xl lg:text-6xl">
-    Projects We’ve <span className="text-blue-400">Brought to Life</span>
+    Projects We’ve <span className="text-teal-400">Brought to Life</span>
   </h2>
   <p className="relative z-20 mt-4 max-w-2xl text-center text-base text-neutral-200 md:text-lg">
     Here are some of the standout projects we’ve successfully executed for our clients.
@@ -89,7 +89,7 @@ export default function CaseStudy() {
       />
     </div>
 
-<div className="min-h-screen bg-[#e8f1ff] px-4 py-16">
+<div className="min-h-screen bg-white px-4 py-16">
       <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
         {projects.map((project, idx) => (
           <ProjectCard key={idx} {...project} />
