@@ -21,7 +21,7 @@ export default function Service() {
         {/* Stats Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full">
           {/* ✅ Business Automation - Larger (2 columns on large screens) */}
-          <WobbleCard containerClassName="col-span-1 lg:col-span-2 bg-green-800 min-h-[500px] lg:min-h-[300px]">
+          <WobbleCard containerClassName="col-span-1 lg:col-span-2 bg-teal-700 min-h-[500px] lg:min-h-[300px]">
             <div className="max-w-sm">
               <h2 className="max-w-sm text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
                 Business Automation
@@ -36,7 +36,7 @@ export default function Service() {
           </WobbleCard>
 
           {/* ✅ UI/UX Design - Smaller (1 column on large screens) */}
-          <WobbleCard containerClassName="col-span-1 bg-pink-800 min-h-[500px] lg:min-h-[300px]">
+          <WobbleCard containerClassName="col-span-1 bg-teal-500 min-h-[500px] lg:min-h-[300px]">
             <div className="max-w-xs">
               <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
                 UI/UX Design
@@ -50,7 +50,7 @@ export default function Service() {
           </WobbleCard>
 
           {/* ✅ Mobile App Development */}
-          <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-indigo-800">
+          <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-teal-500">
             <h2 className="max-w-80 text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
               Mobile App Development
             </h2>
@@ -62,7 +62,7 @@ export default function Service() {
           </WobbleCard>
 
           {/* ✅ Web Development */}
-          <WobbleCard containerClassName="col-span-1 lg:col-span-2 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
+          <WobbleCard containerClassName="col-span-1 lg:col-span-2 bg-teal-700 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
             <div className="max-w-sm">
               <h2 className="max-w-sm md:max-w-lg text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
                 Web Development

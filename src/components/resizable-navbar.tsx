@@ -242,7 +242,7 @@ export const NavbarLogo = () => {
         width={30}
         height={30}
       />
-      <span className="font-bold text-3xl text-teal-950 dark:text-white">W.A.C</span>
+      <span className="font-bold text-3xl text-teal-950 dark:text-white">WAC</span>
     </a>
   );
 };

@@ -17,7 +17,6 @@ export function Footer() {
           <ul className="space-y-2 text-sm">
             <li><Link href="/team" className="hover:underline">About Team</Link></li>
             <li><Link href="/case-study" className="hover:underline">Projects</Link></li>
-            <li><Link href="#hero" className="hover:underline">Home</Link></li>
             <li><Link href="#service" className="hover:underline">Services</Link></li>
             <li><Link href="#industries" className="hover:underline">Industries</Link></li>
             <li><Link href="#testimonials" className="hover:underline">Testimonials</Link></li>

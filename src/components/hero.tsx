@@ -4,7 +4,7 @@ import { BackgroundBeams } from "./ui/background-beams";
 
 export function Hero() {
   return (
-    <div id="hero" className="h-screen w-full bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
+    <div id="" className="h-screen w-full bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
       <div className="max-w-full mx-auto p-4">
         <div className="max-w-full m-auto p-4">
           <h1 className="relative py-2 z-10 text-xl md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-black to-black text-center font-sans font-bold">

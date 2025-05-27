@@ -1,23 +1,25 @@
 "use client";
 import { ThreeDMarquee } from "@/components/ui/3d-marquee";
-import { ProjectCard } from "@/components/ui/project-card";
+// import { ProjectCard } from "@/components/ui/project-card";
 
 export default function CaseStudy() {
     const projects = [
   {
-    title: "Interactive 3D Marquee",
-    description: "A stunning 3D image scroll experience for product showcases.",
-    image: "https://assets.aceternity.com/cloudinary_bkp/3d-card.png",
+    title: "Khalid Travels & Tradelinks",
+    description: "Khalid Travels & Tradelinks is your trusted partner in global travel and tour services, offering seamless flight bookings, customized holiday packages, visa assistance, and exceptional customer support—designed to turn every journey into a memorable experience.",
+    image: "/all-devices-black.png",
+    country: "Saudi",
+    category: "Travel",
     link: "#",
   },
   {
-    title: "Animated Testimonials",
+    title: "Golden Gymnasium",
     description: "Engaging testimonial section with fluid animations.",
     image: "https://assets.aceternity.com/animated-testimonials.webp",
     link: "#",
   },
   {
-    title: "GitHub Globe Visualization",
+    title: "Golden Gymnasium landing page",
     description: "A 3D globe that visualizes GitHub user activity in real-time.",
     image: "https://assets.aceternity.com/github-globe.png",
     link: "#",
@@ -90,7 +92,7 @@ export default function CaseStudy() {
     </div>
 
 <div className="min-h-screen bg-white px-4 py-16">
-      <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
+      <div className="justify-items-center">
         {projects.map((project, idx) => (
           <ProjectCard key={idx} {...project} />
         ))}
@@ -99,3 +101,97 @@ export default function CaseStudy() {
     </>
   );
 }
+
+
+const ProjectCard = ({
+  image,
+  country,
+  category,
+  title,
+  description,
+}) => {
+  const backgroundColors = [
+  'bg-blue-50',
+  'bg-green-50',
+  'bg-yellow-50',
+  'bg-purple-50',
+  'bg-pink-50',
+  'bg-indigo-50',
+  'bg-red-50',
+  'bg-teal-50',
+];
+
+  const randomBgClass = backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
+
+  return (
+    <div className="
+      flex flex-col md:flex-row
+      bg-white 
+      rounded-4xl 
+      overflow-hidden
+      max-w-6xl w-full
+      border
+      hover:rounded-2xl
+      bg-cover
+      my-10
+      md:h-[460px] 
+    ">
+      {/* Media Section (Image/Video Mockups) */}
+      <div className={`
+          md:w-1/2 flex items-center justify-center 
+          px-10
+          ${randomBgClass}
+          border
+          rounded-br-4xl
+          rounded-tr-4xl
+          hover:rounded-br-2xl hover:rounded-tr-2xl
+          order-1 md:order-none
+      `}>
+        {/* Image for the project mockup */}
+        <img
+          src={image}
+          alt={`${title} mockups`}
+          className="max-w-full h-auto"
+          onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+            const target = e.target as HTMLImageElement;
+            target.onerror = null;
+            target.src = 'https://placehold.co/600x400/E0F2F7/00796B?text=Image+Not+Found'; // Fallback image
+          }}
+        />
+      </div>
+
+      {/* Content Section */}
+      <div className="
+          md:w-1/2 p-8 md:p-12 flex flex-col justify-center
+          order-2 md:order-none /* Ensures content is second on small screens, then side-by-side */
+      ">
+        {/* Tags */}
+        <div className="mb-4 flex flex-wrap gap-2">
+          {country && <span className="
+              inline-block px-3 py-1 rounded-full text-sm font-semibold
+              bg-neutral-100 text-neutral-700
+          ">
+            {country}
+          </span>}
+          {category && <span className="
+              inline-block px-3 py-1 rounded-full text-sm font-semibold
+              bg-teal-100 text-teal-700
+          ">
+            {category}
+          </span>}
+        </div>
+
+        {/* Title */}
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight mb-4">
+          {title}
+        </h2>
+
+        {/* Description */}
+        <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
+          {description}
+        </p>
+      </div>
+    </div>
+  );
+};
+

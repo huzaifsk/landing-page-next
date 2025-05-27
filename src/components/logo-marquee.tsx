@@ -1,4 +1,3 @@
-// components/LogoMarquee.tsx
 "use client";
 import Image from "next/image";
 import React from "react";
@@ -11,18 +10,23 @@ const logos = [
 ];
 
 export default function LogoMarquee() {
+  const allLogos = [...logos, ...logos, ...logos, ...logos];
+
   return (
-    <div className="w-full overflow-hidden py-6 bg-white dark:bg-black">
-      <div className="flex items-center animate-marquee whitespace-nowrap">
-        {[...logos, ...logos].map((logo, idx) => (
-          <div key={idx} className="mx-10 flex-shrink-0">
+    <div className="slider">
+      <div className="slide-track">
+        {allLogos.map((logo, idx) => (
+          <div
+            key={idx}
+            className="slide flex items-center justify-center h-[80px]"
+          >
             <Image
               src={logo.src}
               alt={logo.alt}
-              height={logo.height}
-              width={logo.height * 2}
+              height={72}
+              width={144} // fixed aspect ratio
+              className="object-contain max-h-[90px]"
               loading="lazy"
-              className=""
             />
           </div>
         ))}

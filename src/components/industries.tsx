@@ -10,9 +10,9 @@ export function Industries() {
   ));
 
   return (
-   <div id="industries" className="bg-teal-200 w-full h-full md:py-56 py-24 text-center flex flex-col items-center justify-center">
+   <div id="industries" className="bg-white w-full h-full md:py-56 py-24 text-center flex flex-col items-center justify-center">
   <div className="max-w-7xl px-4 mx-auto">
-    <h2 className="text-xl md:text-5xl font-bold text-neutral-800 dark:text-teal-900 font-sans text-center">
+    <h2 className="text-xl md:text-5xl font-bold text-black dark:text-teal-900 font-sans text-center">
       Driving Innovation Across Industries
     </h2>
     <p className="mt-4 text-base md:text-lg text-neutral-600 dark:text-neutral-400 text-center max-w-3xl mx-auto">
@@ -179,16 +179,16 @@ const data = [
   {
     category: "Manufacturing",
     title: "Smart Software for Smarter Manufacturing.",
-    src: "/manufacture.jpg",
+    src: "/manufacturing-2.jpg",
     content: (
       <div className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl">
         <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
           Develop ERP tools, automation dashboards, and IoT integrations to streamline operations, track assets, and analyze production data.
         </p>
         <Image
-        loading="lazy" // <-- Lazy loading
-        priority={false} // Optional: ensure it's not loaded eagerly
-          src="/manufacture.jpg"
+        loading="lazy"
+        priority={false} 
+          src="/manufacturing-2.jpg"
           alt="Manufacturing"
           height="500"
           width="500"

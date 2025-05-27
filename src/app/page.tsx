@@ -35,7 +35,6 @@ export default function HomePage() {
 
 
   const navItems = [
-    { name: "Home", link: "#hero" },
     { name: "Service", link: "#service" },
     { name: "Industries", link: "#industries" },
     {name: "Testimonials", link: "#testimonials"}
@@ -101,11 +100,12 @@ export default function HomePage() {
 
       <LogoMarquee />
 
+      <WhyUs />
+      
       <Service />
 
       <Industries />
 
-      <WhyUs />
 
       <Review />
 
