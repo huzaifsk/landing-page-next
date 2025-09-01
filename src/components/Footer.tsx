@@ -15,11 +15,51 @@ export function Footer() {
         <div>
           <h4 className="text-lg font-medium text-white mb-3">Pages</h4>
           <ul className="space-y-2 text-sm">
-            <li><Link href="/team" className="hover:underline">About Team</Link></li>
-            <li><Link href="/case-study" className="hover:underline">Projects</Link></li>
-            <li><Link href="#service" className="hover:underline">Services</Link></li>
-            <li><Link href="#industries" className="hover:underline">Industries</Link></li>
-            <li><Link href="#testimonials" className="hover:underline">Testimonials</Link></li>
+            <li>
+              <Link
+                href="/team"
+                className="hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                About Team
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/templates"
+                className="hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Explore Templates
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/case-study"
+                className="hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link href="#service" className="hover:underline">
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link href="#industries" className="hover:underline">
+                Industries
+              </Link>
+            </li>
+            <li>
+              <Link href="#testimonials" className="hover:underline">
+                Testimonials
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -27,16 +67,33 @@ export function Footer() {
         <div>
           <h4 className="text-lg font-medium text-white mb-3">Legal</h4>
           <ul className="space-y-2 text-sm">
-            <li><Link href="/terms" className="hover:underline">Terms & Conditions</Link></li>
-            <li><Link href="/privacy" className="hover:underline">Privacy Policy</Link></li>
-            <li><Link href="/cookies" className="hover:underline">Cookie Policy</Link></li>
+            <li>
+              <Link href="/terms" className="hover:underline">
+                Terms & Conditions
+              </Link>
+            </li>
+            <li>
+              <Link href="/privacy" className="hover:underline">
+                Privacy Policy
+              </Link>
+            </li>
+            <li>
+              <Link href="/cookies" className="hover:underline">
+                Cookie Policy
+              </Link>
+            </li>
           </ul>
         </div>
 
         {/* Column 4: Contact */}
         <div>
           <h4 className="text-lg font-medium text-white mb-3">Contact</h4>
-          <p className="text-sm">📧 <a href="mailto:hello@isad.digital" className="hover:underline">info@wolvesandcompany.in</a></p>
+          <p className="text-sm">
+            📧{" "}
+            <a href="mailto:hello@isad.digital" className="hover:underline">
+              info@wolvesandcompany.in
+            </a>
+          </p>
           <p className="text-sm mt-2">📍 Remote & Global</p>
         </div>
       </div>

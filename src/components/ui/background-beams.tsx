@@ -61,7 +61,7 @@ export const BackgroundBeams = React.memo(
       <div
         className={cn(
           "absolute inset-0 flex h-full bg-white w-full items-center justify-center [mask-repeat:no-repeat] [mask-size:40px]",
-          className,
+          className
         )}
       >
         <svg
@@ -106,10 +106,10 @@ export const BackgroundBeams = React.memo(
                   y2: ["0%", `${93 + Math.random() * 8}%`],
                 }}
                 transition={{
-                  duration: Math.random() * 10 + 10,
+                  duration: Math.random() * 10 + 7,
                   ease: "easeInOut",
                   repeat: Infinity,
-                  delay: Math.random() * 10,
+                  delay: Math.random() * 0.5,
                 }}
               >
                 <stop stopColor="#18CCFC" stopOpacity="0"></stop>
@@ -135,7 +135,7 @@ export const BackgroundBeams = React.memo(
         </svg>
       </div>
     );
-  },
+  }
 );
 
 BackgroundBeams.displayName = "BackgroundBeams";
