@@ -37,32 +37,18 @@ function Marquee({
   duration?: number;
 }) {
   return (
-    <div
-      className="relative overflow-hidden w-full py-2"
-      style={{
-        WebkitMaskImage:
-          "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
-        WebkitMaskRepeat: "no-repeat",
-        WebkitMaskSize: "100% 100%",
-        maskImage:
-          "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
-        maskRepeat: "no-repeat",
-        maskSize: "100% 100%",
-      }}
-    >
-      {/* Track */}
+    <div className="overflow-hidden w-full relative py-2">
       <div
-        className="flex gap-8 items-center whitespace-nowrap will-change-transform"
+        className="flex gap-8 items-center"
         style={{
           animation: `${
             reverse ? "marquee-reverse" : "marquee"
           } ${duration}s linear infinite`,
         }}
       >
-        <div className="flex gap-8 items-center">{children}</div>
-        <div className="flex gap-8 items-center">{children}</div>
+        {children}
+        {children}
       </div>
-
       <style jsx>{`
         @keyframes marquee {
           0% {
@@ -86,6 +72,7 @@ function Marquee({
 }
 
 export default function TechStack() {
+  // Split the stack into 3 roughly equal groups for visual variety
   const chunkSize = Math.ceil(STACK_ITEMS.length / 3);
   const rows = [
     STACK_ITEMS.slice(0, chunkSize),
@@ -96,10 +83,10 @@ export default function TechStack() {
   return (
     <section
       id="tech-stack"
-      className="w-full py-16 sm:py-20 md:py-32 lg:py-40 bg-white dark:bg-neutral-950"
+      className="w-full py-24 sm:py-20 md:py-32 lg:py-40 bg-white dark:bg-neutral-950"
     >
       <div className="max-w-6xl mx-auto px-2 sm:px-4">
-        <div className="text-center mb-8 sm:mb-10 md:mb-12">
+        <div className="text-center mb-10 sm:mb-10 md:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight text-neutral-900 dark:text-white">
             Tech Stack
           </h2>

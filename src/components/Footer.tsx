@@ -19,7 +19,6 @@ export function Footer() {
               <Link
                 href="/team"
                 className="hover:underline"
-                target="_blank"
                 rel="noopener noreferrer"
               >
                 About Team
@@ -29,7 +28,6 @@ export function Footer() {
               <Link
                 href="/templates"
                 className="hover:underline"
-                target="_blank"
                 rel="noopener noreferrer"
               >
                 Explore Templates
@@ -39,7 +37,6 @@ export function Footer() {
               <Link
                 href="/case-study"
                 className="hover:underline"
-                target="_blank"
                 rel="noopener noreferrer"
               >
                 Projects

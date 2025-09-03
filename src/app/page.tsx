@@ -1,6 +1,6 @@
 "use client";
 
-import {  useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Hero } from "../components/hero";
 import {
   Navbar,
@@ -15,37 +15,34 @@ import {
 import WhyUs from "@/components/why-us";
 import LogoMarquee from "@/components/logo-marquee";
 import { PopupModal } from "react-calendly";
-import { ContactUs } from '../components/contact';
+import { ContactUs } from "../components/contact";
 import { Industries } from "@/components/industries";
-import Review from '../components/review';
-import { Footer } from '../components/Footer';
+import Review from "../components/review";
+import { Footer } from "../components/Footer";
 import Service from "../components/Service";
-
+import TechStack from "../components/tech-stack";
 
 export default function HomePage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-    const [rootElement, setRootElement] = useState<HTMLElement | null>(null);
+  const [rootElement, setRootElement] = useState<HTMLElement | null>(null);
 
   useEffect(() => {
     const el = document.getElementById("root");
     setRootElement(el);
   }, []);
 
-
   const navItems = [
     { name: "Service", link: "#service" },
     { name: "Industries", link: "#industries" },
-    {name: "Testimonials", link: "#testimonials"}
+    { name: "Testimonials", link: "#testimonials" },
   ];
 
-  const handleMobileClick =()=>{
+  const handleMobileClick = () => {
     setIsMobileMenuOpen(false);
-    setIsOpen(true)
-  }
-
-
+    setIsOpen(true);
+  };
 
   return (
     <main className="flex flex-col min-h-screen  text-white">
@@ -56,7 +53,10 @@ export default function HomePage() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-           <button onClick={()=> setIsOpen(true)} className="px-8 py-2 rounded-full bg-teal-500 text-white font-bold transition duration-200 hover:bg-white hover:text-teal-700 border-2 border-transparent hover:border-teal-500 z-10">
+            <button
+              onClick={() => setIsOpen(true)}
+              className="px-8 py-2 rounded-full bg-teal-500 text-white font-bold transition duration-200 hover:bg-white hover:text-teal-700 border-2 border-transparent hover:border-teal-500 z-10"
+            >
               Book a call
             </button>
           </div>
@@ -87,25 +87,28 @@ export default function HomePage() {
               </a>
             ))}
             <div className="flex flex-col gap-4 pt-4">
-              <button onClick={handleMobileClick} className="px-8 py-2 rounded-full bg-teal-500 text-white font-bold transition duration-200 hover:bg-white hover:text-teal-700 border-2 border-transparent hover:border-teal-500 z-10">
-              Book a call
-            </button>
+              <button
+                onClick={handleMobileClick}
+                className="px-8 py-2 rounded-full bg-teal-500 text-white font-bold transition duration-200 hover:bg-white hover:text-teal-700 border-2 border-transparent hover:border-teal-500 z-10"
+              >
+                Book a call
+              </button>
             </div>
           </MobileNavMenu>
         </MobileNav>
       </Navbar>
-
 
       <Hero />
 
       <LogoMarquee />
 
       <WhyUs />
-      
+
       <Service />
 
-      <Industries />
+      <TechStack />
 
+      <Industries />
 
       <Review />
 
