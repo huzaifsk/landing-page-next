@@ -22,6 +22,7 @@ import { Footer } from "../components/Footer";
 import Service from "../components/Service";
 import TechStack from "../components/tech-stack";
 import Pricing from "../components/pricing";
+import ExploreTemplates from "../components/templates";
 
 export default function HomePage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -37,6 +38,7 @@ export default function HomePage() {
   const navItems = [
     { name: "Service", link: "#service" },
     { name: "Pricing", link: "#pricing" },
+    { name: "Templates", link: "#templates" },
     { name: "Industries", link: "#industries" },
     { name: "Testimonials", link: "#testimonials" },
   ];
@@ -109,6 +111,8 @@ export default function HomePage() {
       <Service />
 
       <Pricing />
+
+      <ExploreTemplates />
 
       <TechStack />
 

@@ -19,7 +19,10 @@ export const metadata: Metadata = {
   description:
     "WAC delivers cutting-edge web and app development, UI/UX design, and custom software solutions.",
   icons: {
-    icon: [{ url: "/favicon.svg", sizes: "10x16", type: "image/svg+xml" }],
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml", sizes: "any" },
+      { url: "/favicon.ico" },
+    ],
   },
   keywords: [
     "Web Development",
