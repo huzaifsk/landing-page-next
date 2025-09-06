@@ -6,6 +6,13 @@ import business from "../../../public/business.png";
 import eco from "../../../public/eco.png";
 import healthtech from "../../../public/healthtech.png";
 import dentist from "../../../public/dentist.png";
+import dentist2 from "../../../public/dental2.png";
+import consultant from "../../../public/consultant2.png";
+import ecosol from "../../../public/ecosol.png";
+import healthtech2 from "../../../public/healttech2.png";
+import homeserv from "../../../public/homeserv.png";
+import interior from "../../../public/interior.png";
+
 import { SquareArrowOutUpRight } from "lucide-react";
 
 const templates = [
@@ -73,6 +80,103 @@ const templates = [
       "Modern",
     ],
   },
+  // Additional templates from screenshot
+  {
+    name: "Smile Care",
+    url: "https://smile-care-two.vercel.app/",
+    image: dentist2,
+    description:
+      "A welcoming and modern template for dental and healthcare clinics. Features appointment booking, service highlights, and patient testimonials to build trust and make scheduling easy.",
+    keywords: [
+      "Dental",
+      "Healthcare",
+      "Clinic",
+      "Medical",
+      "Booking",
+      "Modern",
+      "Trustworthy",
+    ],
+  },
+  {
+    name: "Greentech Solutions",
+    url: "https://greentech-solutions-flax.vercel.app/",
+    image: ecosol,
+    description:
+      "A clean, eco-focused template for green businesses and sustainability startups. Showcases projects, impact, and services with a fresh, nature-inspired design.",
+    keywords: [
+      "Eco",
+      "Green",
+      "Sustainability",
+      "Business",
+      "Startup",
+      "Modern",
+      "Impact",
+    ],
+  },
+  {
+    name: "HealthTech Five",
+    url: "https://healthtech-template-five.vercel.app/",
+    image: healthtech2,
+    description:
+      "A modern template for healthtech companies and digital health products. Includes product features, integrations, and testimonials in a conversion-focused layout.",
+    keywords: [
+      "HealthTech",
+      "SaaS",
+      "Startup",
+      "Medical",
+      "Technology",
+      "Product",
+      "Modern",
+    ],
+  },
+  {
+    name: "Elevate Consult",
+    url: "https://elevate-consult-jade.vercel.app/",
+    image: consultant,
+    description:
+      "A professional template for consulting agencies and business advisors. Features service highlights, testimonials, and a strong call-to-action for client engagement.",
+    keywords: [
+      "Consulting",
+      "Business",
+      "Agency",
+      "Professional",
+      "Landing Page",
+      "Modern",
+      "Responsive",
+    ],
+  },
+  {
+    name: "Aura Interior",
+    url: "https://aura-interior-nine.vercel.app/",
+    image: interior,
+    description:
+      "A stylish template for interior design studios and creative agencies. Showcases portfolio, services, and client testimonials with a modern, elegant layout.",
+    keywords: [
+      "Interior",
+      "Design",
+      "Portfolio",
+      "Creative",
+      "Agency",
+      "Modern",
+      "Elegant",
+    ],
+  },
+  {
+    name: "Home Services Eosin",
+    url: "https://home-services-eosin.vercel.app/",
+    image: homeserv,
+    description:
+      "A clean, conversion-focused template for home service businesses (plumbers, electricians, cleaners, etc). Features service listings, testimonials, and a prominent booking call-to-action.",
+    keywords: [
+      "Home Services",
+      "Business",
+      "Booking",
+      "Landing Page",
+      "Modern",
+      "Responsive",
+      "Service",
+    ],
+  },
 ];
 
 function Pill({ children }: { children: React.ReactNode }) {
@@ -111,14 +215,27 @@ export default function TemplatesShowcase() {
                 className="block rounded-t-2xl overflow-hidden group"
               >
                 {/* Use Next.js Image for preview images */}
-                <Image
-                  src={tpl.image}
-                  alt={tpl.name + " preview"}
-                  className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
-                  style={{ width: "100%", height: "224px", objectFit: "cover" }}
-                  placeholder="blur"
-                  loading="lazy"
-                />
+                {tpl.image ? (
+                  <Image
+                    src={tpl.image}
+                    alt={tpl.name + " preview"}
+                    className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                    style={{
+                      width: "100%",
+                      height: "224px",
+                      objectFit: "cover",
+                    }}
+                    placeholder="blur"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div
+                    className="w-full h-56 flex items-center justify-center bg-gray-200 text-gray-500"
+                    style={{ width: "100%", height: "224px" }}
+                  >
+                    No preview image
+                  </div>
+                )}
               </a>
               <div className="p-6 flex-1 flex flex-col">
                 <div className="flex items-center mb-2">

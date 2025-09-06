@@ -57,6 +57,11 @@ export function Footer() {
                 Testimonials
               </Link>
             </li>
+            <li>
+              <Link href="#pricing" className="hover:underline">
+                Pricing
+              </Link>
+            </li>
           </ul>
         </div>
 

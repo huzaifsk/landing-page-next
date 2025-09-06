@@ -44,10 +44,9 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --shadow-input:
-      0px 2px 3px -1px rgba(0, 0, 0, 0.1),
-      0px 1px 0px 0px rgba(25, 28, 33, 0.02),
-      0px 0px 0px 1px rgba(25, 28, 33, 0.08);
+  --shadow-input: 0px 2px 3px -1px rgba(0, 0, 0, 0.1),
+    0px 1px 0px 0px rgba(25, 28, 33, 0.02),
+    0px 0px 0px 1px rgba(25, 28, 33, 0.08);
 }
 
 :root {
@@ -205,6 +204,6 @@
   }
 }
 
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }

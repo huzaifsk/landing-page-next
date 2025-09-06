@@ -38,6 +38,12 @@ function Marquee({
 }) {
   return (
     <div className="overflow-hidden w-full relative py-2">
+      {/* Left fade */}
+      <div className="pointer-events-none absolute top-0 left-0 h-full w-16 bg-gradient-to-r from-white dark:from-neutral-950 to-transparent z-10" />
+
+      {/* Right fade */}
+      <div className="pointer-events-none absolute top-0 right-0 h-full w-16 bg-gradient-to-l from-white dark:from-neutral-950 to-transparent z-10" />
+
       <div
         className="flex gap-8 items-center"
         style={{
@@ -49,6 +55,7 @@ function Marquee({
         {children}
         {children}
       </div>
+
       <style jsx>{`
         @keyframes marquee {
           0% {
@@ -95,7 +102,7 @@ export default function TechStack() {
           </p>
         </div>
         <div className="flex flex-col gap-4 sm:gap-6">
-          <Marquee duration={28}>
+          <Marquee duration={30}>
             {rows[0].map((item) => (
               <div
                 key={item.name}
@@ -114,7 +121,7 @@ export default function TechStack() {
               </div>
             ))}
           </Marquee>
-          <Marquee reverse duration={34}>
+          <Marquee reverse duration={30}>
             {rows[1].map((item) => (
               <div
                 key={item.name}
@@ -133,7 +140,7 @@ export default function TechStack() {
               </div>
             ))}
           </Marquee>
-          <Marquee duration={26}>
+          <Marquee duration={30}>
             {rows[2].map((item) => (
               <div
                 key={item.name}
