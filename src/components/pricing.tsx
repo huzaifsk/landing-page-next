@@ -131,10 +131,17 @@ export default function Pricing() {
               key={plan.name}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              whileHover={{ y: -10 }} // 🔥 simple elevation
+              transition={{ duration: 0.2, delay: 0.2 }}
+              whileHover={{
+                y: -18,
+                scale: 1.04,
+                boxShadow:
+                  "0 12px 40px 0 rgba(16, 185, 129, 0.18), 0 2px 8px 0 rgba(0,0,0,0.08)",
+                filter: "brightness(1.03)",
+              }}
+              whileTap={{ scale: 0.98 }}
               className={cn(
-                "relative group rounded-2xl transition-all duration-300 overflow-visible", // ✅ allow badge visibility
+                "relative group rounded-2xl transition-all duration-300 overflow-visible",
                 plan.isPopular
                   ? "border-2 border-transparent bg-white/90 shadow-2xl scale-105 bg-gradient-to-br from-teal-50 to-white"
                   : "border border-gray-200 bg-white dark:bg-neutral-800 shadow-lg hover:shadow-2xl"
@@ -159,18 +166,6 @@ export default function Pricing() {
                   <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
                     {plan.description}
                   </p>
-                </div>
-
-                {/* Pricing */}
-                <div className="text-center mb-8">
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white">
-                      {plan.price}
-                    </span>
-                    {/* <span className="text-gray-500 ml-2 text-lg">
-                      /{plan.period}
-                    </span> */}
-                  </div>
                 </div>
 
                 {/* Features */}
@@ -210,7 +205,11 @@ export default function Pricing() {
 
                 {/* CTA Button */}
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  type="button"
+                  whileHover={{
+                    scale: 1.07,
+                    boxShadow: "0 4px 24px 0 rgba(16, 185, 129, 0.22)",
+                  }}
                   whileTap={{ scale: 0.95 }}
                   className={cn(
                     "w-full py-3 px-6 rounded-full font-semibold transition-all duration-200 shadow-md",
@@ -219,8 +218,6 @@ export default function Pricing() {
                       : "bg-white text-teal-600 border-2 border-teal-400 hover:bg-teal-500 hover:text-white"
                   )}
                   onClick={handleContactClick}
-                  as="a"
-                  href="#contact"
                 >
                   {plan.buttonText}
                 </motion.button>
