@@ -1,8 +1,7 @@
-
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { Toaster } from 'sonner';
-import { Analytics } from "@vercel/analytics/next"
+import { Toaster } from "sonner";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,17 +14,28 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata  = {
+export const metadata: Metadata = {
   title: "W.A.C - Your Trusted Digital Partner",
-  description: "WAC delivers cutting-edge web and app development, UI/UX design, and custom software solutions.",
-  keywords: ["Web Development", "UI/UX Design", "Mobile Apps", "Custom Software", "WAC"],
+  description:
+    "WAC delivers cutting-edge web and app development, UI/UX design, and custom software solutions.",
+  icons: {
+    icon: [{ url: "/favicon.svg", sizes: "10x16", type: "image/svg+xml" }],
+  },
+  keywords: [
+    "Web Development",
+    "UI/UX Design",
+    "Mobile Apps",
+    "Custom Software",
+    "WAC",
+  ],
   authors: [{ name: "WAC Team", url: "https://wolvesandcompany.in/" }],
   viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
   themeColor: "#0d47a1",
   openGraph: {
     title: "W.A.C - Your Trusted Digital Partner",
-    description: "WAC delivers cutting-edge web and app development, UI/UX design, and custom software solutions.",
+    description:
+      "WAC delivers cutting-edge web and app development, UI/UX design, and custom software solutions.",
     url: "https://wolvesandcompany.in/",
     siteName: "WAC",
     images: [
@@ -42,7 +52,8 @@ export const metadata: Metadata  = {
   twitter: {
     card: "summary_large_image",
     title: "W.A.C - Your Trusted Digital Partner",
-    description: "WAC delivers cutting-edge web and app development, UI/UX design, and custom software solutions.",
+    description:
+      "WAC delivers cutting-edge web and app development, UI/UX design, and custom software solutions.",
     images: ["https://wolvesandcompany.in/og-image.png"],
     creator: "@YourTwitterHandle",
   },
@@ -53,7 +64,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         <div id="root"></div>
         <Analytics />
         <Toaster richColors position="bottom-right" />
