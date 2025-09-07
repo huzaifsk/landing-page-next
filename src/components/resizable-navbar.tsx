@@ -1,6 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import {
   motion,
   AnimatePresence,
@@ -235,7 +236,7 @@ export const NavbarLogo = () => {
       href="#"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
     >
-      <img src="/wolf.png" alt="logo" width={30} height={30} />
+      <Image src="/wolf.png" alt="logo" width={30} height={30} priority />
       <span className="font-bold text-3xl text-teal-950 dark:text-white">
         WAC
       </span>
@@ -272,14 +273,13 @@ export const NavbarButton = ({
       "bg-gradient-to-b from-blue-500 to-blue-700 text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset]",
   };
 
-  // @ts-ignore
   return (
     <Tag
-      href={href || undefined}
+      href={href}
       className={cn(baseStyles, variantStyles[variant], className)}
       {...props}
     >
       {children}
     </Tag>
-  );
+  ) as any;
 };

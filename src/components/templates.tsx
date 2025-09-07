@@ -11,7 +11,7 @@ const templates = [
   {
     name: "Business Consultant",
     url: "https://business-consultant-template.vercel.app/",
-    image: "/business.png",
+    image: "/business.webp",
     description:
       "A modern, professional template for business consultants, agencies, and freelancers.",
     category: "Business",
@@ -20,7 +20,7 @@ const templates = [
   {
     name: "Dental Clinic",
     url: "https://dental-website-template.vercel.app/",
-    image: "/dentist.png", // Changed from /dentist.png to /healthcare.png
+    image: "/dentist.webp", // Changed from /dentist.png to /healthcare.png
     description:
       "A clean and friendly template designed for dental clinics and healthcare professionals.",
     category: "Healthcare",
@@ -29,7 +29,7 @@ const templates = [
   {
     name: "Eco Stride",
     url: "https://eco-stride-template.vercel.app/",
-    image: "/eco.png",
+    image: "/eco.webp",
     description:
       "A vibrant, eco-friendly template for sustainability startups and green businesses.",
     category: "Eco",
@@ -38,7 +38,7 @@ const templates = [
   {
     name: "HealthTech",
     url: "https://healthtech-template.vercel.app/",
-    image: "/healthtech.png",
+    image: "/healthtech.webp",
     description:
       "A cutting-edge template for healthtech companies and digital health products.",
     category: "Tech",
@@ -47,7 +47,7 @@ const templates = [
   {
     name: "Aura Interior",
     url: "https://aura-interior-nine.vercel.app/",
-    image: "/interior.png",
+    image: "/interior.webp",
     description:
       "A stylish template for interior design studios and creative agencies.",
     category: "Creative",
@@ -55,8 +55,8 @@ const templates = [
   },
   {
     name: "Home Services",
-    url: "https://home-services-eosin.vercel.app/",
-    image: "/homeserv.png",
+    url: "https://homehub-pro-template.vercel.app/",
+    image: "/homeserv.webp",
     description:
       "A clean, conversion-focused template for home service businesses.",
     category: "Services",
@@ -152,6 +152,9 @@ export default function ExploreTemplates() {
                   width={400}
                   height={250}
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                  placeholder="blur"
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
 

@@ -2,16 +2,16 @@
 
 import React from "react";
 import Image from "next/image";
-import business from "../../../public/business.png";
-import eco from "../../../public/eco.png";
-import healthtech from "../../../public/healthtech.png";
-import dentist from "../../../public/dentist.png";
-import dentist2 from "../../../public/dental2.png";
-import consultant from "../../../public/consultant2.png";
-import ecosol from "../../../public/ecosol.png";
-import healthtech2 from "../../../public/healttech2.png";
-import homeserv from "../../../public/homeserv.png";
-import interior from "../../../public/interior.png";
+import business from "../../../public/business.webp";
+import eco from "../../../public/eco.webp";
+import healthtech from "../../../public/healthtech.webp";
+import dentist from "../../../public/dentist.webp";
+import dentist2 from "../../../public/dental2.webp";
+import consultant from "../../../public/consultant2.webp";
+import ecosol from "../../../public/ecosol.webp";
+import healthtech2 from "../../../public/healttech2.webp";
+import homeserv from "../../../public/homeserv.webp";
+import interior from "../../../public/interior.webp";
 
 import { SquareArrowOutUpRight } from "lucide-react";
 
@@ -83,7 +83,7 @@ const templates = [
   // Additional templates from screenshot
   {
     name: "Smile Care",
-    url: "https://smile-care-two.vercel.app/",
+    url: "https://bright-smile-template.vercel.app/",
     image: dentist2,
     description:
       "A welcoming and modern template for dental and healthcare clinics. Features appointment booking, service highlights, and patient testimonials to build trust and make scheduling easy.",
@@ -99,7 +99,7 @@ const templates = [
   },
   {
     name: "Greentech Solutions",
-    url: "https://greentech-solutions-flax.vercel.app/",
+    url: "https://eco-tech-solutions-blush.vercel.app/",
     image: ecosol,
     description:
       "A clean, eco-focused template for green businesses and sustainability startups. Showcases projects, impact, and services with a fresh, nature-inspired design.",
@@ -115,7 +115,7 @@ const templates = [
   },
   {
     name: "HealthTech Five",
-    url: "https://healthtech-template-five.vercel.app/",
+    url: "https://medtech-portal.vercel.app/",
     image: healthtech2,
     description:
       "A modern template for healthtech companies and digital health products. Includes product features, integrations, and testimonials in a conversion-focused layout.",
@@ -131,7 +131,7 @@ const templates = [
   },
   {
     name: "Elevate Consult",
-    url: "https://elevate-consult-jade.vercel.app/",
+    url: "https://consult-template.vercel.app/",
     image: consultant,
     description:
       "A professional template for consulting agencies and business advisors. Features service highlights, testimonials, and a strong call-to-action for client engagement.",
@@ -163,7 +163,7 @@ const templates = [
   },
   {
     name: "Home Services Eosin",
-    url: "https://home-services-eosin.vercel.app/",
+    url: "https://homehub-pro-template.vercel.app/",
     image: homeserv,
     description:
       "A clean, conversion-focused template for home service businesses (plumbers, electricians, cleaners, etc). Features service listings, testimonials, and a prominent booking call-to-action.",

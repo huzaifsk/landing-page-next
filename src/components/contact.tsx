@@ -20,13 +20,13 @@ export function ContactUs() {
           className="mb-36 text-center"
         >
           <h2 className="text-xl md:text-5xl font-bold text-black dark:text-white">
-            We Build Globally. Let's{" "}
+            We Build Globally. Let&apos;s{" "}
             <Cover className="cursor-pointer">Scale</Cover> Together.
           </h2>
           <p className="text-base md:text-lg text-neutral-700 dark:text-neutral-200 max-w-2xl mx-auto mt-3">
-            Whether you're looking to expand your reach, accelerate your growth,
-            or collaborate with a global-first team — we're here to make it
-            happen. Our impact spans continents, and so can yours.
+            Whether you&apos;re looking to expand your reach, accelerate your
+            growth, or collaborate with a global-first team — we&apos;re here to
+            make it happen. Our impact spans continents, and so can yours.
           </p>
         </motion.div>
 

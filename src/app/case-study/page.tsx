@@ -1,8 +1,8 @@
 "use client";
 import { ThreeDMarquee } from "@/components/ui/3d-marquee";
 import images from "@/lib/images.json";
-import khalidImg from "../../../public/khalid_lp.png";
-import equityImg from "../../../public/equity.png";
+import khalidImg from "../../../public/khalid_lp.webp";
+import equityImg from "../../../public/equity.webp";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
