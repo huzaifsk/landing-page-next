@@ -23,11 +23,7 @@ export const metadata: Metadata = {
   description:
     "WAC is your trusted digital partner for web development, app development, UI/UX design, automation, and custom software solutions. We help startups and businesses transform digitally with innovative, scalable, and user-centric products, including business process automation and workflow optimization.",
   icons: {
-    icon: [
-      { url: "/favicon.ico", type: "image/x-icon", sizes: "any" },
-      { url: "/favicon.svg", type: "image/svg+xml" },
-    ],
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+    icon: [{ url: "/favicon.svg", type: "image/x-icon", sizes: "any" }],
   },
   keywords: [
     "Web Development",
