@@ -3,10 +3,10 @@ import Image from "next/image";
 import React from "react";
 
 const logos = [
-  { src: "/dextor.png", alt: "Dextor", height: 72 },
-  { src: "/client-glide.png", alt: "Client Glide", height: 72 },
-  { src: "/danish-xerox.png", alt: "Danish Xerox", height: 72 },
-  { src: "/golden-gymnasium.png", alt: "Golden Gymnasium", height: 64 },
+  { src: "/dextor.avif", alt: "Dextor", height: 72 },
+  { src: "/client-glide.avif", alt: "Client Glide", height: 72 },
+  { src: "/danish-xerox.avif", alt: "Danish Xerox", height: 72 },
+  { src: "/golden-gymnasium.avif", alt: "Golden Gymnasium", height: 64 },
 ];
 
 export default function LogoMarquee() {
