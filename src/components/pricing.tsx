@@ -131,7 +131,7 @@ export default function Pricing() {
               key={plan.name}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.2, delay: 0.2 }}
+              transition={{ duration: 0, delay: 0 }}
               whileHover={{
                 y: -18,
                 scale: 1.04,
